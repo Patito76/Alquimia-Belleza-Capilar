@@ -10,148 +10,250 @@ body {
     background-color: #181419; 
     color: white;
 }
-.header {
-    background-color: #9f3647;
-    color: #ffffff;
-    height: 15vh;
-    position: sticky;
-    top: 0;
+
+/* ----- ENCABEZADO ----- */
+
+    
+.encabezado {
+    display:flex; 
+    justify-content: space-between;
+    position: fixed;
+    align-items: center;
     z-index: 10;
+    background-color: black;
+    height: 4rem;
+    width: 100%;
+    }
+    
+#logo{
+    width: 7vw;
+    height: 100%;
+    /* border-radius: 50%; */
+}
 
+.listaNav {
+    list-style: none;
+    display: flex;
+    padding: 2vw;
+}
 
-    .navegacion {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 40px;
-        margin-right: 40px;
-        padding: 1.5rem 0;
+.listaNav a {
+    font-family: "Advent Pro", sans-serif; 
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 2rem;
+} 
 
-        .anclaLogo {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 1.2rem;
+    /* --- Diseño Responsive "ENCABEZADO" --- */
+
+    @media(max-width:900px){
+        #logo{
+            font-size: 20px;
+            flex-wrap: wrap;
+            width: 100px;
         }
-
-        .listaNav {
-            list-style: none;
-            display: flex;
-            align-items: center;
-
-            .listaItem {
-                margin-right: 20px;
+    }
 
 
-                .linkNav {
-                    color: #ffffff;
-                    text-decoration: none;
-                    font-weight: 700;
-                    font-size: 1.1rem;
-                    padding: 0.5rem 1rem;
+/* ----- PORTADA ----- */
+.portada{
+  position: relative;
+  /* display:inline-block; */
+  text-align: center;
+  
+}
 
-                   
-                    transition: transform 0.3s, box-shadow 0.3s;
-                     &:hover{
-                        transform: scale(0.95);
-                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-                        border-radius: 5px;
-                    }
+.img-portada{
+    width: 100%;
+    height: 27rem;
+}
 
-                }
-                .linkNav.Turnos{
-                    background-color:#181419; 
-                    color: white;
-                    border-radius: 5px;
+.texto-portada{
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: "Allura", cursive;
+    font-size: 5rem;
+}
 
-                    transition: transform 0.3s, box-shadow 0.3s;
+/* --- Diseño Responsive "PORTADA" --- */
 
-                    &:hover{
-                        background-color: #9f3647;
-                        transform: scale(0.95);
-                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-                    }
-                }
-
-            }
-        }
+@media(max-width:900px){
+    .portada{
+        width: 100%;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+    .texto-portada{
+        font-size: 50px;
     }
 }
 
 
- @media (max-width:768px){
-    .header{
-        height: initial;
-        .navegacion {
-            margin-left: 10px;
-            margin-right: 10p;
-            flex-direction: column;
-            row-gap: 20px;
+/* ----- CONTENIDO 1 ----- */
 
-            .anclaLogo{
-                font-weight: 700;
-                font-size: 1.2rem;    
-           
-            }
-
-            .listaNav {
-                padding: initial;
-                    
-
-                .listaItem {
-                    .linkNav {
-                        font-weight: 400;
-                        margin-right: initial;
-                        font-size: 1rem;
-                        padding: 0.2rem;
-                    
-
-
-                    }
-                }
-            }
-        }
-    }  
-} 
-
-.AlquimiaBellezaCapilar{
-    text-align: center;  
-}
-
-.Galeria {
-  display:flex; 
-  justify-content: space-around;
-  align-items: center;
-
-}
-.galeria.imagen {
+.contenedor{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     display: flex;
-}
-  
-.galeria.parrafo {  
-    display: flex; /* Asegura que el párrafo se muestre en una línea separada */
-
-  }
-.Servicios{
-    display:flex; 
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-  
+}
 
-}  
-.ServiciosBrindados{
+.contenedor-galeria .titulo-galeria{
+    font-size: 1.5rem;
     text-align: center;
-
-}  
-
-.ServiciosImagenes {
-    display: flex; 
-    justify-content: space-around;
-    align-items: center;
-  
-
-   
 }
+
+.contenedor-galeria .galeria{
+    width: 15rem;
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+    margin: 2.5rem;
+    border:3px solid #fff;
+    border-radius: 2%;
+}
+
+.contenedor-galeria .galeria img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.contenedor-galeria .galeria .capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+.galeria:hover .capa{
+    transform: scale(1);
+}
+
+.contenedor-galeria .capa p{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* --- Diseño Responsive "CONTENIDO 1" --- */
+
+@media(max-width:900px){
+    .contenedor{
+        width: 90%;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* ----- CONTENIDO 2 ----- */
+
+#Servicios{
+    background-color: #e7e7e5ff;
+    width: 100%;
+    height: 100%;
+    padding-top: 4rem;
+    margin-bottom: 5rem;
+}
+
+ #Servicios h4{
+    display: flex;
+    font-size: 2.5rem;
+    justify-content: center;
+    color: #333333;
+    margin-bottom: 5rem;
+}
+
+.contenedor-servicios{
+	width: 100%;
+    padding-bottom: 5rem;
+	display: flex;
+	max-width: 80vw;
+	margin: auto;
+}
+
+.tipos-servicios{
+	width: 100%;
+	margin: 10px;
+	border-radius: 6px;
+	overflow: hidden;
+	background:#fff;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 250ms ease-out;
+	cursor: default;
+}
+
+.tipos-servicios:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+
+.tipos-servicios img{
+	width: 100%;
+	height: 210px;
+}
+
+.tipos-servicios .info-servicios{
+	padding: 15px;
+	text-align: center;
+}
+
+.tipos-servicios .info-servicios h2{
+	margin-bottom: 1.5rem;
+	color: #7a7a7a;
+}
+
+.tipos-servicios .info-servicios li{
+	line-height: 1.8;
+	color: #6a6a6a;
+	font-size: 1.3rem;
+	margin-bottom: 5px;
+}
+
+/* -- Botón -- */
+
+/* .tipos-servicios .info-servicios a{
+	display: inline-block;
+	padding: 10px;
+	margin-top: 1.5rem;
+	text-decoration: none;
+    font-size: 1.2rem;
+	color: #ef759cff;
+	border: 1px solid #ef759cff;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+.tipos-servicios .info-servicios a:hover{
+	background: #ef759cff;
+	color: #fff;
+}   */
+
+
+/* --- Diseño Responsive "CONTENIDO 2" --- */
+
+@media(min-width:600px) and (max-width:1000px){
+	.contenedor-servicios{
+		flex-wrap: wrap;
+	}
+	.tipos-servicios{
+		margin: 20px;
+	}
+} 
   
 footer{
     background:white;
@@ -178,6 +280,8 @@ footer{
             }
         }
     }
+
+
     .main{
          /*seccion de registrarse.html*/
         .seccionContacto{
