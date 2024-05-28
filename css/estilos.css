@@ -158,19 +158,6 @@ footer{
    
 
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
-}
-
-body{
-    background-color: #181419;
-    color:white; 
-     /* scrollbar-color: #9f3647  #181419; /*nuevo
-     scrollbar-width: thin;*/
-}
 .bodyContacto{
     height: 100vh;
     background:linear-gradient(to right top, #24242473,#24242473),url("bg-register.jpg");
