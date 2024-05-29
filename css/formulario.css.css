@@ -35,9 +35,9 @@ body{
          /*seccion de registrarse.html*/
         .seccionContacto{
             background-color:rgb(42, 42, 42);
-            width: 40%;
+            width: 30%;
             margin:0 auto;
-            border-radius: 50px;
+            border-radius: 5px;
             padding: 40px 20px;
             display: flex;
             flex-direction:column;
@@ -52,11 +52,11 @@ body{
             }
             /*seleccionar todos los input menos el checkbox*/
             form{
-                width:100%;
+                width: 100%;
                 padding:40px;
                 input:not(.check,.boton),select{
                     width: 100%;
-                    margin-bottom: 20px;
+                    margin-bottom: 10px;
                     height: 40px;
                     padding: 0px 20px;
                     font-size: 1.2rem;
@@ -67,7 +67,7 @@ body{
                     color:rgb(255, 255, 255);
                 }
                 .error input:not(.check,.boton),.error select{
-                    border: 5px solid #ff0000;
+                    border: 1px solid #ff0000;
                 }
                 .error-text{
                     color: #ff0000;
@@ -93,11 +93,18 @@ body{
                     color: #ffffff;
                     padding: 1rem 1rem;
                     border-radius: 5px;
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                     font-weight: 500;
                    
                 }
-               
+                .ayuda{
+                    margin-top:40px;
+                    font-size: 1rem;
+                    text-decoration: none;
+                    color: #787878;
+                    font-weight:400;
+                   
+                }
             }
            
         }
@@ -120,7 +127,7 @@ body{
             .seccionContacto{
                 width: 95%;
                 padding: 10px 10px;
-                .tituloContacto{
+                .tituloRegistrarse{
                     font-size: 2rem;
                 }
                form{
@@ -144,7 +151,10 @@ body{
                     padding: 0.8rem 0.8rem;
                     font-size: 0.8rem;
                 }
-            
+                .ayuda{
+                    text-align: left;
+                    font-size: 0.8rem;
+                }
                }
                
             }
@@ -152,3 +162,4 @@ body{
     }
 
 }
+
