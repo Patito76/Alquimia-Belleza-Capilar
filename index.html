@@ -4,7 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="./css/formulario.css.css"> 
         <link rel="stylesheet" href="./css/estilos.css">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
@@ -24,19 +25,19 @@
 <!----- ENCABEZADO ----->
 <header>
     <div class="encabezado">
-    <img id="logo" src="/img/Logo Salón de Belleza y Spa Femenino Rosa y Dorado_20240422_142134_0000.png" alt="">
-     <nav>
-         <ul class="listaNav">
-         <li><a href="#">Keratinas y Botox</a></li>
-         <li><a href="#">Alisado Definitivos</a></li>
-         <li><a href="#Servicios">Servicios</a></li>
-         <li><a href="#">Contacto</a></li>
-         </ul>
-     </nav>
-     </div>
- </header>
-
-    <!-- <main id="main" class="main"> -->
+        <!-- <div class="logo-container"> -->
+            <img id="logo" src="img/logo.png" alt="Salón de Belleza y Spa Femenino">
+        <!-- </div> -->
+        <nav>
+            <ul class="listaNav">
+                <li><a href="#Keratinas y Botox">Keratinas y Botox</a></li>
+                <li><a href="#Alisado Definitivos">Alisado Definitivo</a></li>
+                <li><a href="#Servicios">Servicios</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
 <!----- PORTADA ----->
 
@@ -51,6 +52,7 @@
 <!----- CONTENIDO 1 ----->
 
 <section>
+    <section id="Keratinas y Botox">
     
     <div class="contenedor">
 
@@ -86,7 +88,12 @@
             </div>
         </div>
     </div>
-
+    </section>
+   
+    <!----- CONTENIDO 2 ----->
+ 
+    <section>
+        <section id="Alisado Definitivos">
     <div class="contenedor">
         
         <div class="contenedor-galeria">
@@ -126,7 +133,7 @@
 
 
 
- <!---- CONTENIDO 2  ----->
+ <!---- CONTENIDO 3  ----->
       
  <section id="Servicios">
 
@@ -197,10 +204,11 @@
         </div>
     </div>
      </section>
-
          <!--Aca va el formulario-->
+    <section>
+        <section id="Contacto">
+     
         <section data-aos="zoom-in" data-aos-duration="1000" class="seccionContacto">
-            <!--pongo get ya que en github pages da error el method post-->
             <form action="" method="get">
                 <h2 class="tituloContacto">Contacto</h2>
                 <div>
@@ -227,7 +235,11 @@
     </script>
     <script src="validar1.js"></script>
     <footer>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.8820850140637!2d-64.12060922539555!3d-31.444912997629142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432bce1616b13a3%3A0x3fd16938bf828e4d!2sGrupo%20Scout%20Dean%20Funes!5e0!3m2!1ses-419!2sar!4v1716223672066!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </footer>
+    
 </body>
 
 </html>

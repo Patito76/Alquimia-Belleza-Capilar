@@ -1,9 +1,8 @@
-*{ 
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
-
 }
 
 body {
@@ -11,91 +10,122 @@ body {
     color: white;
 }
 
-/* ----- ENCABEZADO ----- */
-
-    
 .encabezado {
-    display:flex; 
+    display: flex; 
+    align-items: center;
     justify-content: space-between;
     position: fixed;
-    align-items: center;
     z-index: 10;
     background-color: black;
     height: 4rem;
     width: 100%;
-    }
-    
-#logo{
+}
+
+/* .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 200px;
+    margin-right: 60px;
+}
+
+.logo h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333333;
+} */
+
+/* nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+} */
+
+/* nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+} */
+
+#logo {
     width: 7vw;
     height: 100%;
-    /* border-radius: 50%; */
+    
 }
 
 .listaNav {
     list-style: none;
     display: flex;
-    padding: 2vw;
+    padding: 10px 20px;
 }
 
 .listaNav a {
     font-family: "Advent Pro", sans-serif; 
     text-decoration: none;
-    color: #ffffff;
+    color: #fff;
+    font-weight: 600;
     font-size: 1.5rem;
     padding: 2rem;
-} 
-
-    /* --- Diseño Responsive "ENCABEZADO" --- */
-
-    @media(max-width:900px){
-        #logo{
-            font-size: 20px;
-            flex-wrap: wrap;
-            width: 100px;
-        }
-    }
-
-
-/* ----- PORTADA ----- */
-.portada{
-  position: relative;
-  /* display:inline-block; */
-  text-align: center;
-  
 }
 
-.img-portada{
+nav ul li a:hover {
+    color: #ff00ff;
+}
+
+
+ /* --- Diseño Responsive "ENCABEZADO" --- */
+
+@media(max-width: 900px) {
+    #logo {
+        flex-wrap: wrap;
+        width: 100px;
+    }
+}
+
+/* ----- PORTADA ----- */
+
+.portada {
+    position: relative;
+    text-align: center;
+}
+
+.img-portada {
     width: 100%;
     height: 27rem;
 }
 
-.texto-portada{
+.texto-portada {
     color: black;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-family: "Allura", cursive;
     font-size: 5rem;
 }
 
 /* --- Diseño Responsive "PORTADA" --- */
 
-@media(max-width:900px){
-    .portada{
+@media(max-width: 900px) {
+    .portada {
         width: 100%;
         margin: auto;
         flex-wrap: wrap;
     }
-    .texto-portada{
+    .texto-portada {
         font-size: 50px;
     }
 }
 
-
 /* ----- CONTENIDO 1 ----- */
 
-.contenedor{
+.contenedor {
     margin-top: 5rem;
     margin-bottom: 5rem;
     display: flex;
@@ -103,35 +133,34 @@ body {
     align-items: center;
 }
 
-.contenedor-galeria .titulo-galeria{
+.contenedor-galeria .titulo-galeria {
     font-size: 1.5rem;
     text-align: center;
 }
 
-.contenedor-galeria .galeria{
+.contenedor-galeria .galeria {
     width: 15rem;
     height: 25rem;
     position: relative;
     overflow: hidden;
     margin: 2.5rem;
-    border:3px solid #fff;
+    border: 3px solid #fff;
     border-radius: 2%;
 }
 
-.contenedor-galeria .galeria img{
+.contenedor-galeria .galeria img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
 }
 
-.contenedor-galeria .galeria .capa{
+.contenedor-galeria .galeria .capa {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,29 +169,28 @@ body {
     cursor: pointer;
 }
 
-.galeria:hover .capa{
+.galeria:hover .capa {
     transform: scale(1);
 }
 
-.contenedor-galeria .capa p{
+.contenedor-galeria .capa p {
     font-size: 1.5rem;
     text-align: center;
 }
 
 /* --- Diseño Responsive "CONTENIDO 1" --- */
 
-@media(max-width:900px){
-    .contenedor{
+@media(max-width: 900px) {
+    .contenedor {
         width: 90%;
         margin: auto;
         flex-wrap: wrap;
     }
 }
 
-
 /* ----- CONTENIDO 2 ----- */
 
-#Servicios{
+#Servicios {
     background-color: #e7e7e5ff;
     width: 100%;
     height: 100%;
@@ -170,7 +198,7 @@ body {
     margin-bottom: 5rem;
 }
 
- #Servicios h4{
+#Servicios h4 {
     display: flex;
     font-size: 2.5rem;
     justify-content: center;
@@ -178,50 +206,50 @@ body {
     margin-bottom: 5rem;
 }
 
-.contenedor-servicios{
-	width: 100%;
+.contenedor-servicios {
+    width: 100%;
     padding-bottom: 5rem;
-	display: flex;
-	max-width: 80vw;
-	margin: auto;
+    display: flex;
+    max-width: 80vw;
+    margin: auto;
 }
 
-.tipos-servicios{
-	width: 100%;
-	margin: 10px;
-	border-radius: 6px;
-	overflow: hidden;
-	background:#fff;
-	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
-	transition: all 250ms ease-out;
-	cursor: default;
+.tipos-servicios {
+    width: 100%;
+    margin: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    transition: all 250ms ease-out;
+    cursor: default;
 }
 
-.tipos-servicios:hover{
-	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
-	transform: translateY(-3%);
+.tipos-servicios:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
 }
 
-.tipos-servicios img{
-	width: 100%;
-	height: 210px;
+.tipos-servicios img {
+    width: 100%;
+    height: 210px;
 }
 
-.tipos-servicios .info-servicios{
-	padding: 15px;
-	text-align: center;
+.tipos-servicios .info-servicios {
+    padding: 15px;
+    text-align: center;
 }
 
-.tipos-servicios .info-servicios h2{
-	margin-bottom: 1.5rem;
-	color: #7a7a7a;
+.tipos-servicios .info-servicios h2 {
+    margin-bottom: 1.5rem;
+    color: #7a7a7a;
 }
 
-.tipos-servicios .info-servicios li{
-	line-height: 1.8;
-	color: #6a6a6a;
-	font-size: 1.3rem;
-	margin-bottom: 5px;
+.tipos-servicios .info-servicios li {
+    line-height: 1.8;
+    color: #6a6a6a;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
 }
 
 /* -- Botón -- */
@@ -246,162 +274,166 @@ body {
 
 /* --- Diseño Responsive "CONTENIDO 2" --- */
 
-@media(min-width:600px) and (max-width:1000px){
-	.contenedor-servicios{
-		flex-wrap: wrap;
-	}
-	.tipos-servicios{
-		margin: 20px;
-	}
-} 
-  
-footer{
-    background:white;
-   
-
+@media(min-width: 600px) and (max-width: 1000px) {
+    .contenedor-servicios {
+        flex-wrap: wrap;
+    }
+    .tipos-servicios {
+        margin: 20px;
+    }
 }
-.bodyContacto{
+
+/* ----- PIE DE PÁGINA ----- */
+
+footer {
+    background: white;
+}
+
+.map-container {
+    width: 100%;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px; 
+    border: 0;
+}
+
+/* ----- FORMULARIO ----- */
+
+.bodyContacto {
     height: 100vh;
-    background:linear-gradient(to right top, #24242473,#24242473),url("bg-register.jpg");
+    background: linear-gradient(to right top, #24242473, #24242473), url("bg-register.jpg");
     background-size: cover;
     background-position: center;
-    .headerContacto{
-        color:#ffffff;
-        height: 8vh;
-        padding:30px;
-        .anclaLogo{
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 1.2rem;
-             /*animacion hover*/
-            &:hover{
-                animation: tilt-n-move-shaking 0.25s infinite;
-            }
-        }
-    }
-
-
-    .main{
-         /*seccion de registrarse.html*/
-        .seccionContacto{
-            background-color:rgb(42, 42, 42);
-            width: 40%;
-            margin:0 auto;
-            border-radius: 50px;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction:column;
-            justify-content: center;
-            align-items: center;
-            height: 90vh;
-            font-size:1.2rem;
-            .tituloContacto{
-                font-size: 2.5rem;
-                font-weight: 700;
-                margin-bottom: 20px;
-            }
-            /*seleccionar todos los input menos el checkbox*/
-            form{
-                width:100%;
-                padding:40px;
-                input:not(.check,.boton),select{
-                    width: 100%;
-                    margin-bottom: 20px;
-                    height: 40px;
-                    padding: 0px 20px;
-                    font-size: 1.2rem;
-                    border-radius: 20px;
-                    border: 2px solid #9f3647;
-                    background-color: #333333;
-                    outline: none;
-                    color:rgb(255, 255, 255);
-                }
-                .error input:not(.check,.boton),.error select{
-                    border: 5px solid #ff0000;
-                }
-                .error-text{
-                    color: #ff0000;
-                    font-size: 0.8rem;
-                    margin-top:0px;
-                    margin-bottom: 10px;
-                }
-              
-                .terminos{
-                    font-size: 0.8rem;
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 20px;
-                    .textoCheck{
-                        margin-left: 10px;
-                    }
-                }
-                .boton{
-                    width: 87%;
-                    box-sizing: content-box;
-                    background-color:#9f3647;
-                    border: 2px solid #9f3647;
-                    color: #ffffff;
-                    padding: 1rem 1rem;
-                    border-radius: 5px;
-                    font-size: 1.5rem;
-                    font-weight: 500;
-                   
-                }
-               
-            }
-           
-        }
-   
-    }
 }
 
+.headerContacto {
+    color: #ffffff;
+    height: 8vh;
+    padding: 30px;
+}
 
+.anclaLogo {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
 
-/*media querys para mobile PAGINA registrarse*/
+.main .seccionContacto {
+    background-color: rgb(42, 42, 42);
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 50px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    font-size: 1.2rem;
+}
+
+.tituloContacto {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 100%;
+    padding: 40px;
+}
+
+form input:not(.check, .boton), form select {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 40px;
+    padding: 0px 20px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    border: 2px solid #ff00ff;
+    outline: none;
+    color: rgb(0, 0, 0);
+}
+
+.error input:not(.check, .boton), .error select {
+    border: 5px solid #ff0000;
+}
+
+.error-text {
+    color: #ff0000;
+    font-size: 0.8rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.terminos {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.textoCheck {
+    margin-left: 10px;
+}
+
+.boton {
+    width: 87%;
+    box-sizing: content-box;
+    background-color: #ff00ff;
+    border: 2px solid #ff00ff;
+    color: #ffffff;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
 @media (max-width: 1200px) {
-    .bodyContacto{
-        .headerContacto{
-            padding:20px;
-            .anclaLogo{
-                font-size: 1rem;
-            }
-        }
-        .main{
-            .seccionContacto{
-                width: 95%;
-                padding: 10px 10px;
-                .tituloContacto{
-                    font-size: 2rem;
-                }
-               form{
-                width: 100%;
-                text-align: center;
-               
-                input:not(.check,.boton),select{
-                    width: 80%;
-                    height: 35px;
-                    font-size: 1rem;
-                }
-                .terminos{
-                    width: 80%;
-                    margin:0 auto;
-                    font-size: 0.7rem;
-                }
-                .boton{
-                    margin-top: 20px;
-                    margin-bottom: 20px;
-                    width: 70%;
-                    padding: 0.8rem 0.8rem;
-                    font-size: 0.8rem;
-                }
-            
-               }
-               
-            }
-        }
+    .bodyContacto .headerContacto {
+        padding: 20px;
     }
 
+    .anclaLogo {
+        font-size: 1rem;
+    }
+
+    .main .seccionContacto {
+        width: 95%;
+        padding: 10px 10px;
+    }
+
+    .tituloContacto {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 100%;
+        text-align: center;
+    }
+
+    form input:not(.check, .boton), form select {
+        width: 80%;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .terminos {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 0.7rem;
+    }
+
+    .boton {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 70%;
+        padding: 0.8rem 0.8rem;
+        font-size: 0.8rem;
+    }
 }
 
 
