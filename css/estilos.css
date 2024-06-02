@@ -10,8 +10,6 @@ body {
     color: white;
 }
 
-/* Encabezado */
-
 .encabezado {
     display: flex; 
     align-items: center;
@@ -23,9 +21,42 @@ body {
     width: 100%;
 }
 
+/* .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 200px;
+    margin-right: 60px;
+}
+
+.logo h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333333;
+} */
+
+/* nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+} */
+
+/* nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+} */
+
 #logo {
-    width: 7vw;
+    width: 5vw;
     height: 100%;
+    
 }
 
 .listaNav {
@@ -47,6 +78,9 @@ nav ul li a:hover {
     color: #ff00ff;
 }
 
+
+ /* --- Diseño Responsive "ENCABEZADO" --- */
+
 @media(max-width: 900px) {
     #logo {
         flex-wrap: wrap;
@@ -54,7 +88,7 @@ nav ul li a:hover {
     }
 }
 
-/* Portada */
+/* ----- PORTADA ----- */
 
 .portada {
     position: relative;
@@ -76,13 +110,20 @@ nav ul li a:hover {
     font-size: 5rem;
 }
 
+/* --- Diseño Responsive "PORTADA" --- */
+
 @media(max-width: 900px) {
+    .portada {
+        width: 100%;
+        margin: auto;
+        flex-wrap: wrap;
+    }
     .texto-portada {
         font-size: 50px;
     }
 }
 
-/* Contenido 1 */
+/* ----- CONTENIDO 1 ----- */
 
 .contenedor {
     margin-top: 5rem;
@@ -90,7 +131,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    }
 
 .contenedor-galeria .titulo-galeria {
     font-size: 1.5rem;
@@ -137,6 +178,8 @@ nav ul li a:hover {
     text-align: center;
 }
 
+/* --- Diseño Responsive "CONTENIDO 1" --- */
+
 @media(max-width: 900px) {
     .contenedor {
         width: 90%;
@@ -145,7 +188,7 @@ nav ul li a:hover {
     }
 }
 
-/* Contenido 2 */
+/* ----- CONTENIDO 2 ----- */
 
 #Servicios {
     background-color: #e7e7e5ff;
@@ -209,6 +252,28 @@ nav ul li a:hover {
     margin-bottom: 5px;
 }
 
+/* -- Botón -- */
+
+/* .tipos-servicios .info-servicios a{
+	display: inline-block;
+	padding: 10px;
+	margin-top: 1.5rem;
+	text-decoration: none;
+    font-size: 1.2rem;
+	color: #ef759cff;
+	border: 1px solid #ef759cff;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+.tipos-servicios .info-servicios a:hover{
+	background: #ef759cff;
+	color: #fff;
+}   */
+
+
+/* --- Diseño Responsive "CONTENIDO 2" --- */
+
 @media(min-width: 600px) and (max-width: 1000px) {
     .contenedor-servicios {
         flex-wrap: wrap;
@@ -218,10 +283,10 @@ nav ul li a:hover {
     }
 }
 
-/* Pie de página */
+/* ----- PIE DE PÁGINA ----- */
 
 footer {
-    background: rgb(0, 0, 0);
+    background: white;
 }
 
 .map-container {
@@ -234,7 +299,7 @@ footer {
     border: 0;
 }
 
-/* Formulario */
+/* ----- FORMULARIO ----- */
 
 .bodyContacto {
     height: 100vh;
@@ -279,7 +344,6 @@ footer {
 form {
     width: 100%;
     padding: 40px;
-    text-align: center;
 }
 
 form input:not(.check, .boton), form select {
@@ -318,6 +382,7 @@ form input:not(.check, .boton), form select {
 
 .boton {
     width: 87%;
+   
     box-sizing: content-box;
     background-color: #ff00ff;
     border: 2px solid #ff00ff;
@@ -326,32 +391,6 @@ form input:not(.check, .boton), form select {
     border-radius: 5px;
     font-size: 1.5rem;
     font-weight: 500;
-}
-
-form input[type="submit"] {
-    width: 100%;
-    padding: 8px 16px;
-    margin-top: 32px;
-    border: 2px solid #ff00ff;
-    border-radius: 5px;
-    display: block;
-    color: #fff;
-    background-color: #ff00ff;
-}
-
-form input[type="submit"]:hover {
-    cursor: pointer;
-}
-
-textarea {
-    width: 100%;
-    height: 100px;
-    border: 2px solid #ff00ff;
-    border-radius: 10px;
-    background-color: #f6f6f6;			
-    margin: 8px 0;
-    resize: none;
-    display: block;
 }
 
 @media (max-width: 1200px) {
@@ -370,6 +409,11 @@ textarea {
 
     .tituloContacto {
         font-size: 2rem;
+    }
+
+    form {
+        width: 100%;
+        text-align: center;
     }
 
     form input:not(.check, .boton), form select {
@@ -392,9 +436,6 @@ textarea {
         font-size: 0.8rem;
     }
 }
-
-/* Botón de WhatsApp */
-
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -411,9 +452,64 @@ textarea {
 }
 
 .whatsapp-float img {
-    margin-top: 10%;
+    margin-top:10%;
 }
 
 .whatsapp-float:hover {
-    background-color: #128C7E;
+    background-color: #128C7E;
+
 }
+
+form{
+	width:50%;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#363636;
+
+}
+
+form label{
+	width:72px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+form input[type="text"],
+form input[type="email"]{
+	width:40%px;
+	padding:3px 10px;
+	border:2px solid #ff00ff;
+	border-radius:10px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+
+form input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:2px solid #ff00ff;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#ff00ff;
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+}
+
+textarea{
+	width:100%;
+	height:100px;
+	border:2px solid #ff00ff;
+	border-radius:10px;
+	background-color:#f6f6f6;			
+	margin:8px 0;
+	/*resize: vertical | horizontal | none | both*/
+	resize:none;
+	display:block;
+}
+
