@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="./css/formulario.css"> 
+    <link rel="icon" href="img/favicon.ico"> 
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <!-- Tipos de letras -->
@@ -47,15 +46,15 @@
     </div>
 
 
-<!----- CONTENIDO 1 ----->
+         <!----- CONTENIDO 1 ----->
 
-<section>
+
     <section id="Keratinas y Botox">
     
     <div class="contenedor">
 
         <div class="contenedor-galeria">
-        <h1 class="titulo-galeria">Keratina de Cereza</h1>
+            <h1 class="titulo-galeria">Keratina de Cereza</h1>
             <div class="galeria">
             <img src="img/Ali Def.jpg" alt="imagen 1">
                 <div class="capa">
@@ -86,13 +85,12 @@
             </div>
         </div>
     </div>
-    </section>
+ </section>
    
     <!----- CONTENIDO 2 ----->
  
-    <section >
-        <section id="Alisado Definitivos">
-    <div class="contenedor">
+    <section id="Alisado Definitivos">
+        <div class="contenedor">
         
         <div class="contenedor-galeria">
         <h1 class="titulo-galeria">Alisado PH Acido</h1>     
@@ -116,7 +114,7 @@
         </div>
 
 
-        <div class="contenedor-galeria">
+       <div class="contenedor-galeria">
         <h1 class="titulo-galeria">Alisado Definitivo Progresivo</h1>
             <div class="galeria">
             <img class="img-galeria" src="img/pelo Valen.jpg" alt="Imagen 6"> 
@@ -125,15 +123,15 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
     
-     </section>
+    </section>
 
 
 
  <!---- CONTENIDO 3  ----->
       
- <section id="Servicios">
+<section id="Servicios">
 
     <h4>Servicios Brindados</h4>
     <div class="contenedor-servicios">
@@ -199,37 +197,40 @@
                     </ul>
                     <!-- <a href="#">Consultar Precio</a> -->
             </div>
-        </div>
-    </div>
-     </section>
-  
-        <!-- Formulario de Contacto -->
-        <section>
-            <div class="seccion">
-                <section data-aos="zoom-in" data-aos-duration="1000" class="" id="Contacto">
-                    <form id="formularioContacto" action="#" target="" method="get" name="formDatosPersonales" onsubmit="return validarFormulario()">
-                        <h2 class="tituloContacto">Contacto</h2>
-                        <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required />
+        </div>  
+    </section>
 
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Email" required />
-
-                        <label for="asunto">Asunto</label>
-                        <input type="text" name="asunto" id="asunto" placeholder="Titular de la consulta" required />
-
-                        <label for="mensaje">Mensaje</label>
-                        <textarea name="mensaje" for="mensaje" placeholder="Describe brevemente en menos de 300 caracteres" maxlength="300" required></textarea>
-
-                        <input type="submit" name="enviar" value="Enviar Consulta" />
-                    </form>
-                    <br><br><br>
-                </section>
+                              <!--FORMULARIO-->
+<section>
+     <main id="main" class="main">
+        <section data-aos="zoom-in" data-aos-duration="1000" class="seccionRegistrarse">
+        <!--pongo get ya que en github pages da error el method post-->
+        <form action="" method="get">
+            <h2 class="tituloContacto">Contacto</h2>
+            <div>
+                <input type="nombre" placeholder="Nombre" id="nombre" name="nombre">
+                <div class="error-text"></div>
             </div>
-        </section>
+            <div>
+                <input type="email" placeholder="Email" id="email" name="email">
+                <div class="error-text"></div>
+            </div>
+            <div>
+                <input type="consulta" placeholder="Consulta" id="consulta" name="consulta">
+                <div class="error-text"></div>
+            </div>
+            <div>
+                <input class="boton" type="submit" value="ENVIAR CONSULTA">
+            </div>
+        </form>
+    </section>
+        </main>
+ </section>
     </main>
 
-    <footer style="background-image: url(img/rubabblanco2.jpeg); color: #fff; padding: 5px 0;">
+
+    
+<footer style="background-image: url(img/rubabblanco2.jpeg); color: #fff; padding: 5px 0;">
         <!-- Mapa de Google -->
         <div id="mapa" class="map-container" style="height: 400px;"></div>
 
@@ -276,7 +277,7 @@
             <a href="https://mail.google.com/mail/u/0/#inbox" style="text-decoration: none; color: #f8f8f8;">patesseiva@gmail.com</a>
             </div>
     
-          </div>
+        </div>
     </footer>
 
     <!-- Scripts adicionales -->
@@ -284,6 +285,7 @@
     <script>
         AOS.init();
     </script>
+    <script src="./validar1.js"></script>
     <script>
         function validarFormulario() {
             var nombre = document.getElementById('nombre').value;
@@ -297,7 +299,7 @@
             }
 
             return true;
-        }
+        } 
     </script>
 </body>
 
