@@ -18,8 +18,7 @@
 
 <body>
     <!-- ENCABEZADO -->
-    <header>
-       <!----- ENCABEZADO ----->
+    
 <header>
     <div class="encabezado">
         <!-- <div class="logo-container"> -->
@@ -30,7 +29,7 @@
                 <li><a href="#Keratinas y Botox">Keratinas y Botox</a></li>
                 <li><a href="#Alisado Definitivos">Alisado Definitivo</a></li>
                 <li><a href="#Servicios">Servicios</a></li>
-                <li><a href="#Contacto">Contacto</a></li>
+                <li><a href="#formulario">Contacto</a></li>
             </ul>
         </nav>
     </div>
@@ -201,11 +200,12 @@
     </section>
 
                               <!--FORMULARIO-->
-<section>
+<section id="formulario">
      <main id="main" class="main">
         <section data-aos="zoom-in" data-aos-duration="1000" class="seccionRegistrarse">
         <!--pongo get ya que en github pages da error el method post-->
-        <form action="" method="get">
+        <form action="" method="get"onsubmit="return validarFormulario()">
+            
             <h2 class="tituloContacto">Contacto</h2>
             <div>
                 <input type="nombre" placeholder="Nombre" id="nombre" name="nombre">
@@ -225,9 +225,7 @@
         </form>
     </section>
         </main>
- </section>
-    </main>
-
+</section>
 
     
 <footer style="background-image: url(img/rubabblanco2.jpeg); color: #fff; padding: 5px 0;">
@@ -281,26 +279,11 @@
     </footer>
 
     <!-- Scripts adicionales -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
     <script src="./validar1.js"></script>
-    <script>
-        function validarFormulario() {
-            var nombre = document.getElementById('nombre').value;
-            var email = document.getElementById('email').value;
-            var asunto = document.getElementById('asunto').value;
-            var mensaje = document.getElementById('mensaje').value;
-
-            if (nombre === '' || email === '' || asunto === '' || mensaje === '') {
-                alert('Por favor, complete todos los campos del formulario.');
-                return false;
-            }
-
-            return true;
-        } 
-    </script>
 </body>
 
 </html>
