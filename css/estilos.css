@@ -564,6 +564,7 @@ form input:not(.check, .boton), form select {
         font-size: 0.8rem;
     }
 } ----*/
+
 .whatsapp-float {
     position: fixed;
     width: 60px;
