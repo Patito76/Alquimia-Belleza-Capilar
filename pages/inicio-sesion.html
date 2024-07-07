@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/favicon.ico">
+    <!-- <link rel="stylesheet" href="../css/estilos.css"> -->
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <!-- Tipos de letras -->
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <title>Alquimia Belleza Capilar</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaw2cR3dRQE-x72YTgL3ROLIIEDIcr9ak"></script>
+</head>
+
+
+<body>
+    <header>
+        <div>
+        <div  id="volverInicio"><a href="../index.html"><input class="boton" type="submit" value="volver"></a>
+        </div>
+        </div>      
+    </header>            
+    
+    <!-- ---- FORMULARIO INICIAR SESION ---- -->
+
+    <main class="contenedor">
+             
+    <section id="formularioIniciarSesion" class="Iniciar Sesion">
+        <section data-aos="zoom-in" data-aos-duration="1000" class="seccionIniciarSesion">
+            <form action="../LoginServlet" method="post">
+                <h2 class="tituloIniciarSesion">Iniciar Sesión</h2>
+                <div>
+                    <input type="email" placeholder="Email" id="email" name="email">
+                    <div class="error-text"></div>
+                </div>
+
+                <div>
+                    <input type="password" placeholder="Contraseña" id="password" name="password">
+                    <div class="error-text"></div>
+                </div>
+
+                <div>
+                    <input class="boton" type="submit" value="Ingresar">
+                </div>
+
+                <div>
+                    <p>¿No tienes una cuenta?
+                        <a class="ayuda" href="/pages/registro.html">Regístrate</a>
+                    </p>
+                </div>
+            </form>
+            
+        </section>
+    </section> 
+
+   </main>
+
+
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+       AOS.init();
+       window.onload = function () {
+   var urlParams = new URLSearchParams(window.location.search);
+   if (urlParams.get('exito') === 'true') {
+   document.getElementById('mensajeExito').style.display = 'block';
+   } else if (urlParams.get('error') === 'true') {
+   document.getElementById('mensajeError').style.display = 'block';
+   }
+   };
+   </script>
+   <script src="./validar1.js"></script>
+</body>

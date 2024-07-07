@@ -111,3 +111,7 @@ function displayErrors(errors) {
 //} 
 // mostrarError(document.querySelector('#password'),'INGRESA ESTE CAMPO');
 
+
+
+
+
