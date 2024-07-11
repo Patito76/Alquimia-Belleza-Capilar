@@ -1,70 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+
+}
+
 body{
-    background-image:url(https://img.freepik.com/vector-gratis/patron-salon-belleza-dibujado-mano_23-2150110656.jpg?size=338&ext=jpg&ga=GA1.1.2113030492.1720310400&semt=ais_user);
-    background-size:auto
+    
+    color:black;
+    background-image:url(../img/fondo-form.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
-/* ----- Iniciar sesión ----- */
+/* ----- FORMULARIO DE REGISTRO ---- */
 
-#volverInicio {
-    width: 5vw;
-}
-
-.boton {
-    padding: 10px;
-    background-color: #a70a4b;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.boton:hover {
-    background-color: #883be0de;
-}
-
-.seccionIniciarSesion{
-    transform:translate(-50%,-50%);
-    backdrop-filter: blur(10px);
-	box-shadow: 0 2px 4px rgba(219, 186, 186, 0.986);
-    border-radius: 10px;
-    max-width: 100%;
-    text-align:center;
-    display:flex;
-    width: 30vw;
-    padding: 2vw 5vh;
-    font-size: 1.7vw;
-	top:50%;
-	left: 50%;
-
-}
-        
-         /*----- Registrarse -----*/
-
-.seccionRegistrarse{
-    transform:translate(-50%,-50%);
-    backdrop-filter: blur(10px);
-	box-shadow: 0 2px 4px rgba(219, 186, 186, 0.986);
-    border-radius: 10px;
-    width: 35vw;
-    max-width: 100%;
+.formularioRegistro{
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba (0,0,0,.5);
+     /* background-color:rgb(42, 42, 42); */
+    width: 30%;
+    margin:0 auto;
     border-radius: 5px;
-    padding: 40px 20px;
-    display:flex;
+    /* padding: 40px 20px; */
+    display: flex;
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    height: 75vh;
+    height:auto;
     font-size:1.2rem;
 }
 
-.tituloRegistrarse{
+.form-registro h2{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.boton:hover{
+    background-color: #ffb8eb;
+}
+
+.campo{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 40%;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+div{
+    margin-bottom: 1.5rem;
+}
+
+.error {
+    color: red;
+}
+
+ 
+
+/* ----- FORMULARIO DE INICIO DE SESIÓN ---- */
+
+
+.headerRegistrarse{
+    color:#ffffff;
+    height: 8vh;
+    padding:30px;
+}
+
+.anclaLogo{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+     /*animacion hover*/
+.anclaLogo:hover{
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+    
+         /*seccion de registrarse.html*/
+
+.main .seccionRegistrarse{
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba (0,0,0,.5);
+     /* background-color:rgb(42, 42, 42); */
+    width: 30%;
+    margin:0 auto;
+    border-radius: 5px;
+    /* padding: 40px 20px; */
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    font-size:1.2rem;
+    }
+    
+.main .seccionRegistrarse .tituloRegistrarse{
     font-size: 2.5rem;
     font-weight: 700;
+    margin-bottom: 20px;
+    color: black;
 }
-        
-            /*seleccionar todos los input menos el checkbox*/
 
+
+            /*seleccionar todos los input menos el checkbox*/
             form{
                 width: 100%;
                 padding:40px;
@@ -75,13 +129,13 @@ body{
                     padding: 0px 20px;
                     font-size: 1.2rem;
                     border-radius: 20px;
-                    border: 2px solid #9f3647;
-                    background-color: #333333;
+                    border: 2px solid #db6ac6;
+                    background-color: #ea8ecd;
                     outline: none;
                     color:rgb(255, 255, 255);
                 }
                 .error input:not(.check,.boton),.error select{
-                    border: 1px solid #ff0000;
+                    border: 5px solid #ff0000;
                 }
                 .error-text{
                     color: #ff0000;
@@ -93,8 +147,8 @@ body{
                 .terminos{
                     font-size: 0.8rem;
                     display: flex;
-                    align-items: center;
-                    margin-bottom: 20px;
+                    margin-bottom: 2rem;
+                    
                     .textoCheck{
                         margin-left: 10px;
                     }
@@ -102,10 +156,10 @@ body{
                 .boton{
                     width: 87%;
                     box-sizing: content-box;
-                    background-color:#9f3647;
+                    background-color:#d82ba7;
                     border: 2px solid #9f3647;
                     color: #ffffff;
-                    padding: 1rem 1rem;
+                    padding: 0.8rem 1rem;
                     border-radius: 5px;
                     font-size: 1rem;
                     font-weight: 500;
@@ -115,84 +169,21 @@ body{
                     margin-top:40px;
                     font-size: 1rem;
                     text-decoration: none;
-                    color: #787878;
+                    color: #ff0095;
                     font-weight:400;
                    
                 }
+
+                .pregunta-registro{
+                    color: black;
+                    margin-top: 1rem;
+                }
             }
            
-
-
-.tituloRegistrarse,
-.tituloIniciarSesion {
-    text-align: center;
-    color: #f7f0f0;
-}
-.contenedor {
-    display: flex;
-    justify-content: space-around;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="checkbox"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-
-
-.error-text {
-    color: red;
-}
-
-.ayuda {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    color: #333;
-    text-decoration: none;
-}
-
-/* Estilos específicos para el checkbox de términos y condiciones */
-.terminos {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.check {
-    margin-right: 10px;
-}
-
-.textoCheck {
-    color: #333;
-}
+        
 
 
 /*media querys para mobile PAGINA registrarse*/
-@media (max-width: 768px) {
-    .seccionRegistrarse,
-    .seccionIniciarSesion {
-        padding: 10px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    input[type="checkbox"],
-    .boton {
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    .ayuda {
-        font-size: 14px;}}
-
 @media (max-width: 1200px) {
     .bodyRegistrarse{
         .headerRegistrarse{
@@ -217,11 +208,10 @@ input[type="checkbox"] {
                     height: 35px;
                     font-size: 1rem;
                 }
-                .terminos{
-                    width: 80%;
+                /* .terminos{
                     margin:0 auto;
                     font-size: 0.7rem;
-                }
+                } */
                 .boton{
                     margin-top: 20px;
                     margin-bottom: 20px;
@@ -237,145 +227,6 @@ input[type="checkbox"] {
                
             }
         }
-    }}
-
-    /* ----- Contacto ----- */
-
-    .bodyContacto { 
-        height: 100vh;
-        background: linear-gradient(to right top, #24242473, #24242473), url("bg-register.jpg");
-        background-size: cover;
-        background-position: center;
-    }
-    
-    .headerContacto {
-        color: #ffffff;
-        height: 8vh;
-        padding: 30px;
-    }
-    
-    .anclaLogo {
-        text-decoration: none;
-        color: #ffffff;
-        font-weight: 700;
-        font-size: 1.2rem;
-    }
-    
-    .main .seccionContacto {
-        background-color: rgb(42, 42, 42);
-        width: 40%;
-        margin: 0 auto;
-        border-radius: 20px;
-        padding: 40px 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 65vh;
-        font-size: 1.2rem;
-    }
-    
-    .tituloContacto {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 20px;
-    }
-    
-    form {
-        width: 100%;
-        padding: 40px;
-    }
-    
-    form input:not(.check, .boton), form select {
-        width: 100%;
-        margin-bottom: 20px;
-        height: 60px;
-        padding: 0px 20px;
-        font-size: 1.2rem;
-        border-radius: 10px;
-        border: 2px solid #ff00ff;
-        outline: none;
-        color: rgb(0, 0, 0);
-    }
-    
-    .error input:not(.check, .boton), .error select {
-        border: 5px solid #ff0000;
-    }
-    
-    .error-text {
-        color: #ff0000;
-        font-size: 0.8rem;
-        margin-top: 0px;
-        margin-bottom: 10px;
-    }
-    
-    .terminos {
-        font-size: 0.8rem;
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-    
-    .textoCheck {
-        margin-left: 10px;
-    }
-    
-    .boton {
-        width: 87%;
-       
-        box-sizing: content-box;
-        background-color: #ff00ff;
-        border: 2px solid #ff00ff;
-        color: #ffffff;
-        padding: 1rem 1rem;
-        border-radius: 5px;
-        font-size: 1.5rem;
-        font-weight: 500;
-    }
-    
-    @media (max-width: 1200px) {
-        .bodyContacto .headerContacto {
-            padding: 20px;
-        }
-    
-        .anclaLogo {
-            font-size: 1rem;
-        }
-    
-        .main .seccionContacto {
-            width: 95%;
-            padding: 10px 10px;
-        }
-    
-        .tituloContacto {
-            font-size: 2rem;
-        }
-    
-        form {
-            width: 100%;
-            text-align: center;
-        }
-    
-        form input:not(.check, .boton), form select {
-            width: 80%;
-            height: 35px;
-            font-size: 1rem;
-        }
-    
-        .terminos {
-            width: 80%;
-            margin: 0 auto;
-            font-size: 0.7rem;
-        }
-    
-        .boton {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            width: 70%;
-            padding: 0.8rem 0.8rem;
-            font-size: 0.8rem;
-        }
     }
 
-
-    
+}
