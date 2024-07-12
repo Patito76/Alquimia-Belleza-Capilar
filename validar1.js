@@ -46,41 +46,6 @@ errors.forEach(function(error) {
   errorDiv.appendChild(errorPara);
 });
 }
- document.getElementById('formularioIniciarSesion').addEventListener('submit', function(event) {
-     var email = document.getElementById('email').value;
-     var password = document.getElementById('password').value;
-
-     var errorMessages = [];
-
-     if (email === '') {
-         errorMessages.push('Por favor, ingresa tu email');
-     }
-
-     if (password === '') {
-         errorMessages.push('Por favor, ingresa tu contraseña');
-     }
-
-     if (errorMessages.length > 0) {
-         event.preventDefault();
-         displayErrors(errorMessages);
-     }
- });
-
- function displayErrors(errors) {
-     var errorDiv = document.querySelectorAll('.error-text');
-    
-     errorDiv.forEach(function(div) {
-         div.innerHTML = '';
-         errors.forEach(function(error) {
-             var errorPara = document.createElement('p');
-             errorPara.textContent = error;
-             div.appendChild(errorPara);
-         });
-     });
- }
-
-//obtener el formulario
-const formulario = document.getElementById('formulario');
 
 //agregar un evento de escucha para cuando el se envie el formulario
 formulario.addEventListener('submit', evento => {
@@ -94,11 +59,11 @@ formulario.addEventListener('submit', evento => {
     }
 });
 
-// function validarFormulario(){
+function validarFormulario(){
     //obtener los valores de los campos
  const nombre = document.getElementById('nombre').value;
  const email = document.getElementById('email').value;
- const contraseña = document.getElementById('contraseña').value;
+ const contraseña = document.getElementById('password').value;
  const apellido =  document.getElementById('apellido').value;
 
     //validar cada campo
@@ -121,7 +86,7 @@ formulario.addEventListener('submit', evento => {
         return true;
     }
     
-     
+}  
 
 
 // ----------------------------------------------------
@@ -137,110 +102,4 @@ function validarEmail(email){
     return expresionRegular.test(email)
 }
 
-
-// ---- Para inicio de Sesión ----
-
-
-document.addEventListener('DOMContentLoaded',()=>{
-
-
-
-// ----------------------------------------------
-// funcion para mostrar error
-const mostrarError = (input,mensaje) =>{
-    //acceder al div padre
-    const divPadre = input.parentNode;
-    //encuantra el elemento error-text
-    const errorText = divPadre.querySelector('.error-text');
-    //agrega la clase de error al elemento padre
-    divPadre.classList.add('error');
-    //agregamos mensaje de error
-    errorText.innerText = mensaje;
-    // console.log(divPadre);
-}
-
-const input = document.querySelector('#password');
-const mensaje = 'Campo obligatorio';
-
-const eliminarError = input=>{
-    //Acceder a la etiqueta contenedora
-    const divPadre = input.parentNode;
-    divPadre.classList.remove('error');
-    const errorText = divPadre.querySelector('.error-text');
-    errorText.innerText = '';
-}
-
-const formulario = document.querySelector('form');
-
-formulario.querySelector('input').forEach(input => {
-    input.addEventListener('change', ()=>{
-        const valor = input.value.trim();
-
-        if (valor !== ''){
-            eliminarError(input);
-        }
-    })
-})
-
-
-function validarCampo(campoId, mensaje){
-    const campo = document.getElementById(campoId);
-    const value = campo.value.trim();
-
-    if(value ==''){
-        mostrarError(campo, mensaje);
-        return false;
-    }else{
-        eliminarError(campo);
-        return true;
-    }
-}
-
-
-function isEmail (email){
-    const expresionRegular = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return expresionRegular.test(email);
-}
-
-function validarEmail(campoId, mensaje){
-    const campo = document.getElementById(campoId);
-    const email = campo.value.trim();
-
-    if(email ===''){
-        mostrarError(campo, 'El correo electrónico es obligatorio');
-        return false
-    }else if(isEmail(email)){
-        mostrarError(campo,mensaje);
-        return false
-    }else{
-        eliminarError(campo);
-        return true
-    }
-}
-
-
-const validarFormulario = () =>{
-    let validar = true;
-
-    validar = validarEmail('email','El correo electrónico no es válido') && validar;
-
-    validar = validarCampo('password','La contraseña es obligatoria') && validar;
-
-    return validar;
-}
-
-
-formulario.addEventListener('submint', event =>{
-    event.preventDefault();
-    if (!validarFormulario()){
-        event.preventDefault()
-        console.log("El formulario no es válido");
-    }else{
-        event.preventDefault();
-        console.log("El formulario es válido");
-    }
-})
-
-})
-// mostrarError(document.querySelector('#password'),'INGRESA ESTE CAMPO');
 
